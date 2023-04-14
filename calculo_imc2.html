@@ -1,0 +1,90 @@
+<meta charset="utf-8">
+
+<br>
+<center><h1><font color= red>CALCULAR IMC</font></h1></center>
+
+<script>
+
+	// Start functions ------>
+
+		//Calculate the IMC 
+	function calImc (weigth, heigth){
+
+		return (weigth/(heigth * heigth));
+	}
+
+		//Calculate the average for IMC
+	function average (imc1, imc2){
+
+		return ((imc1 + imc2)/2);
+	}
+
+		//Show the message
+	function print (message){
+
+		size();
+		document.write(message);
+		jumpLine();
+		makeLine();
+	}
+
+		//Make a space
+	function jumpLine() {
+		
+		document.write("<br><br>");	
+	}
+
+		//Make a Line
+	function makeLine() {
+		
+		document.write("<hr>");	
+	}
+
+	function size() {
+		
+		document.write("<font size=4>");
+	}
+	// End functions <--------
+
+	//Start Variables
+
+	name = prompt("informe su nombre");
+	weigthTaken = prompt(name + " informe su peso");
+	heigthTaken = prompt(name + " informe su altura (Por favor use solo el punto, ejemplo: 1.60");
+	totalimc = calImc(weigthTaken, heigthTaken);
+
+	//End Variable
+
+	//Messages in the Screen
+
+	makeLine();
+	print(name + ", su IMC calculado es: " + calImc(weigthTaken, heigthTaken).toFixed(2));
+
+	//End messages in the screen
+
+	//Conditionals
+
+	if (totalimc < 18.5) {
+
+		print("Esta bajo de peso, por favor ir al centro medico para iniciar un tratamiento");
+	}
+
+	if (totalimc >= 18.5 && totalimc < 25) {
+
+		print("Esta dentro de los niveles estables, por favor siga cuidandose");
+	}
+
+	if (totalimc > 25 && totalimc < 30) {
+
+		print("Esta en sobrepeso, por favor ir al centro medico para iniciar un tratamiento");
+	}
+
+	if (totalimc > 30) {
+
+		print("Sufre de obesidad, por favor ir al centro medico para iniciar un tratamiento")
+	}
+
+	//end Conditionals
+
+
+</script>
