@@ -1,4 +1,4 @@
-# Actividades del programa Oracle
+# Actividades del programa Oracle HTML y JavaScript
 
 En este programa de Oracle estoy aprendiendo desde el inicio a programar
 por eso mis programas subidos a este repositorio son sencillos y cada que pasa uno
