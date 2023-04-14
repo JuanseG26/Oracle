@@ -1,0 +1,61 @@
+<meta charset="utf-8">
+
+<br>
+<center><h1><font color= red>¿PUEDO CONDUCIR?</font></h1></center>
+
+<script>
+
+	// Start functions ------>
+
+		//Show the message
+	function print (message){
+
+		size();
+		document.write(message);
+		jumpLine();
+		makeLine();
+	}
+
+		//Make a space
+	function jumpLine() {
+		
+		document.write("<br><br>");	
+	}
+
+		//Make a Line
+	function makeLine() {
+		
+		document.write("<hr>");	
+	}
+
+	function size() {
+		
+		document.write("<font size=4>");
+	}
+	// End functions <--------
+
+	//Variables
+
+	var ageRequired = 18;
+	var name = prompt("¿Cual es su nombre?")
+	var ageEntered = parseInt(prompt(name + " Digite su edad"));
+	var license = prompt(name +" ¿Tiene licencia?")
+
+	//Conditionals
+
+	if (ageRequired <= ageEntered) {
+
+		if (license == "si") {
+			print(name + " Puede conducir, maneje con cuidado");
+		}
+		else {
+			print(name + " Usted tiene la edad pero no la licencia, Por favor saque la licencia")
+		}
+	}
+
+	if (ageRequired > ageEntered){
+
+		print(name +" Usted no tiene la edad suficiente para conducir");
+	}
+
+</script>
