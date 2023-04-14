@@ -1,0 +1,76 @@
+<meta charset="utf-8">
+
+<br>
+<center><h1><font color= red>CALCULA MEDIA DE LAS EDADES DE UNA FAMILIA</font></h1></center>
+
+<script>
+
+	// Start functions ------>
+
+		//Show the message
+	function print (message){
+
+		size();
+		document.write(message);
+		jumpLine();
+		makeLine();
+	}
+
+		//Make a space
+	function jumpLine() {
+		
+		document.write("<br><br>");	
+	}
+
+		//Make a Line
+	function makeLine() {
+		
+		document.write("<hr>");	
+	}
+
+	function size() {
+		
+		document.write("<font size=4>");
+	}
+
+	// End functions <--------
+
+	//Variables
+
+	var amountAdults = parseInt(prompt("Digite la cantidad de adultos que hay en su familia"));
+	var	amountChildren = parseInt(prompt("Digite la cantidad de hijos que tiene su familia"));
+	var counter1 = 1;
+	var counter2 = 1;
+	var totalAgesAdults = 0
+	var totalAgesChildren = 0
+
+	while (counter1 <= amountAdults) {
+
+		var ageAdults = parseInt(prompt("Digite la edad del adulto numero " + counter1));
+		totalAgesAdults = totalAgesAdults + ageAdults;
+		counter1++;
+
+	}
+
+	while (counter2 <= amountChildren) {
+
+		var ageChildren = parseInt(prompt("Digite la edad del hijo numero " + counter2));
+		totalAgesChildren = totalAgesChildren + ageChildren;
+		counter2++;
+
+	}
+
+	var totalAges = totalAgesAdults + totalAgesChildren;
+	var totalCounter = (counter1 + counter2) - 2;
+	var averageAges = totalAges / totalCounter;
+
+	print("El total de las edades de los adultos es: " + totalAgesAdults);
+	print("El total de las edades de los hijos es: " + totalAgesChildren);
+	print("la media de las edades es = " + averageAges );
+	print("fin del programa");
+
+
+
+	//End Variables
+
+</script>
