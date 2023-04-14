@@ -1,0 +1,89 @@
+<meta charset="utf-8">
+
+<br>
+<center><h1><font color= red>¿CUANTOS PUNTOS TIENE TU EQUIPO?</font></h1></center>
+
+<script>
+
+	// Start functions ------>
+
+		//Calculate the IMC 
+	function calScore (victorys, draws){
+		
+		return victorys * 3 + draws;
+
+	}
+
+		//Calculate the average for IMC
+	function average (imc1, imc2){
+
+		return ((imc1 + imc2)/2);
+	}
+
+		//Show the message
+	function print (message){
+
+		size();
+		document.write(message);
+		jumpLine();
+		makeLine();
+	}
+
+		//Make a space
+	function jumpLine() {
+		
+		document.write("<br><br>");	
+	}
+
+		//Make a Line
+	function makeLine() {
+		
+		document.write("<hr>");	
+	}
+
+	function size() {
+		
+		document.write("<font size=4>")
+	}
+	// End functions <--------
+
+	//Start Variables
+
+	nameTeam = prompt("informe el nombre de su equipo");
+	victorys = parseInt(prompt("informe la cantidad de partidos ganados"));
+	draws = parseInt(prompt("Informe la cantidad de partidos empatados"));
+	previosScore = parseInt(prompt("Informe el puntaje del año anterior"));
+	totalScore = calScore(victorys, draws);
+
+	//End Variable
+
+	//Messages in the Screen
+
+	makeLine();
+	print("Los puntos que tiene el equipo " + nameTeam + " Son: " + totalScore);
+
+	//End message in the Screen
+
+	//Conditionals
+
+	if (previosScore < totalScore){
+
+		print("El equipo esta mejor que el año pasado");
+
+	}
+
+	if (previosScore > totalScore){
+
+		print("El equipo debe mejorar");
+
+	}
+
+	if (previosScore == totalScore){
+
+		print("El equipo esta igual que el año pasado");
+
+	}
+
+	//End Conditionals
+
+</script>
