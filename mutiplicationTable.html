@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+
+<br>
+<center><h1><font color= red>CALCULA LA TABLA DE MULTIPLICAR</font></h1></center>
+
+<script>
+
+	// Start functions ------>
+
+		//Show the message
+	function print (message){
+
+		size();
+		document.write(message);
+		jumpLine();
+		makeLine();
+	}
+
+		//Make a space
+	function jumpLine() {
+		
+		document.write("<br><br>");	
+	}
+
+		//Make a Line
+	function makeLine() {
+		
+		document.write("<hr>");	
+	}
+
+	function size() {
+		
+		document.write("<font size=4>");
+	}
+
+	// End functions <--------
+
+	//Variables
+
+	var multiplier = parseInt(prompt("Digite el numero de la tabla que quiere ver"));
+	var multiplied = parseInt(prompt("Digite el numero hasta donde llegara la tabla"));
+	var counter = 1;
+
+	print ("Iterador WHILE")
+	while (counter <= multiplied) {
+
+		var table = counter * multiplier;
+		print(multiplier + " X " + counter + " = " + table);
+		var counter = counter + 1;
+
+	}
+
+	print("Iterador FOR")
+	for (var counter = 1; counter <= multiplied ;counter++) {
+
+		var table = counter * multiplier;
+		print(multiplier + " X " + counter + " = " + table);
+
+	}
+	//End Variables
+
+</script>
