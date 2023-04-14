@@ -1,0 +1,90 @@
+<meta charset="utf-8">
+
+<br>
+<center><h1><font color= red>JUEGO ADIVINAR EL NUMERO</font></h1></center>
+
+<script>
+
+	// Start functions ------>
+
+		//Show the message
+	function print (message){
+
+		size();
+		document.write(message);
+		jumpLine();
+		makeLine();
+	}
+
+		//Make a space
+	function jumpLine() {
+		
+		document.write("<br><br>");	
+	}
+
+		//Make a Line
+	function makeLine() {
+		
+		document.write("<hr>");	
+	}
+
+	function size() {
+		
+		document.write("<font size=4>");
+	}
+
+	function randomNum(number) {
+
+		return Math.round(Math.random()*number);
+		
+	}
+	// End functions <--------
+
+	//Variables
+
+	var attemps = parseInt(prompt("Digite la cantidad de intentos que quiere permitir"));
+	var range = parseInt(prompt("Digite el numero maximo al que quiere que llegue la adivinanza (Solo numeros mayores a 0)"));
+	var thinkNumber = randomNum(range);	
+	var counter = 1;
+
+	//Conditionals
+
+	while (counter <= attemps) {
+
+		var newNumber = parseInt(prompt("Digite un numero entre 0 y " + range));		
+
+		if (thinkNumber == newNumber) {
+
+			alert("Usted acerto, ¡felicitaciones!");
+			break;
+		}
+
+		if (thinkNumber > newNumber){
+
+			alert("El numero digitado es menor al numero solicitado");
+		}
+
+		if (thinkNumber < newNumber) {
+
+			alert("El numero digitado es mayor al numero solicitado");
+		}
+		counter++;
+	}
+
+	if (thinkNumber == newNumber) {
+			
+		print("Usted acerto, en el intento " + counter +" de "+ attemps + ", el numero pensado era " + thinkNumber );
+
+		}
+
+	else {
+		
+		print("Usted erro, el numero pensado era " + thinkNumber);
+	
+	}
+
+	print("fin del programa");
+
+	//End Conditionals
+
+</script>
