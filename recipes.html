@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+
+<h1>Recetas de Armando</h1>
+
+<script>
+
+    //Functions
+
+    function makeJumps() {
+        document.write("<br>");
+    }
+
+    function makeLines() {
+        document.write("<hr>");
+    }
+
+    function printParagraf(message) {
+        makeJumps();
+        document.write("<font color = blue size = 6>" + message + "</font>");
+        makeLines();
+    }
+
+    function printTitle(message) {
+        makeJumps();
+        makeLines(); 
+        document.write("<font color = purple size = 8>" + message + "</font>");
+        makeLines();
+    }
+
+    //End Functions
+
+    //Variables
+    alert("Bienvenido al creador de recetas de Armando, Aquí podra digitar sus ingredientes y darle nombre a su receta");
+    var nameRecipe = prompt("Digite el nombre de la receta que vamos a crear");
+    var ingredientes = [];
+    var cantidad = parseInt(prompt("Digite la cantidad de ingrediente que necesita"))
+    var counter = 1;
+    //End Variables
+
+    //Main Code
+
+    while (counter <= cantidad){
+        var ingrediente = prompt("Ingrese el ingrediente a utilizar " + counter);
+        var founder = false;
+        
+        for(var position = 0; position < ingredientes.length; position++){
+
+            if (ingrediente == ingredientes[position]){
+                alert("Este ingrediente ya habia sido agregado ")
+                founder = true;
+            }
+        
+        }
+
+        if (founder == false) {
+            ingredientes.push(ingrediente);
+            counter++;
+        }
+    }
+
+    printTitle(nameRecipe);
+    printParagraf(ingredientes);
+    console.log(ingredientes);
+
+    //End Main Code
+</script>
